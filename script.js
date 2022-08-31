@@ -57,7 +57,7 @@ $(document).ready(function () {
     });
 
     $('#forma').submit(function (ev) {
-        if ($('#sifra').val()!==$('#proveriSifru').val() || $('#sifra').val().length<6 || $('#proveriSifru').val().length<6)
+        if ($('#sifra').val()!==$('#proveriSifru').val() || $('#sifra').val().length<5 || $('#proveriSifru').val().length<6)
         {
             console.log("greska");
             var div = document.getElementById('izvestaj');
