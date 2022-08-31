@@ -77,7 +77,7 @@ $(document).ready(function () {
             if($('#izaberiOblast option:selected').val()=="default")
             {
                 ev.preventDefault();
-                window.confirm("Chose an option!");
+                window.confirm("Chose a field!");
             }
             else
             {
