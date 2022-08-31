@@ -2,7 +2,7 @@ $(document).ready(function () {
     $('#ime').focusout(function () {
         if ($('#ime').val().length === 0) {
             console.log("greska");
-            $('#greska1').text("*Upisite ime");
+            $('#greska1').text("*Username required");
             $('#greska1').addClass('greska')
         }
         else {
@@ -17,7 +17,7 @@ $(document).ready(function () {
             else {
                 var div = document.createElement('div');
                 div.classList.add('greska');
-                div.textContent = "*Upisite email";
+                div.textContent = "*Email required";
                 $('#email').after(div);
             }
         }
@@ -34,7 +34,7 @@ $(document).ready(function () {
             else {
                 var div = document.createElement('div');
                 div.classList.add('greska');
-                div.textContent = "*Sifra treba da ima minimum 5 karaktera";
+                div.textContent = "*Password needs to be at least 5 characters";
                 $('#sifra').after(div);
                 console.log("nema dovoljno");
             }
@@ -61,7 +61,7 @@ $(document).ready(function () {
         {
             console.log("greska");
             var div = document.getElementById('izvestaj');
-            div.textContent="Nepravilno unete sifre, minimum je 6 karaktera";
+            div.textContent="Password needs to be at least 5 characters";
             div.classList.add('greska');
             ev.preventDefault();
         }
@@ -77,11 +77,11 @@ $(document).ready(function () {
             if($('#izaberiOblast option:selected').val()=="default")
             {
                 ev.preventDefault();
-                window.confirm("Izaberite neku opciju!");
+                window.confirm("Chose an option!");
             }
             else
             {
-                window.confirm("Izabrali ste " + ($('#izaberiOblast option:selected').val()));
+                window.confirm("You chose " + ($('#izaberiOblast option:selected').val()));
             }
         }
     })
